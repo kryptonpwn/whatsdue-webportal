@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>whatsdue</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="font-size: 18px;">
+    {{> nav}}
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+<!--Page Body-->
+<form action="/course" method="post">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h3>Create Course</h3><br>
+            <div id="formBody">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" id="courseName" placeholder="Course Name" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="section" class="form-control" placeholder="Course Number" required>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <div id="student0" >
+                        <div class="row">
+                            <div class="col">
+                                Student Information
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="firstName"  class="form-control"
+                                       placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="lastName" class="form-control" placeholder="Last name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" name = "id" placeholder="Student ID number">
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <input id="addStudent" name="addStudent" type="button" value="New Student Form">
+            <br><br>
+            <input id="submitCourse" type="submit" value="Submit Course">
+        </div>
+    </div>
+</form>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <div class="footer-basic">
+        <footer>
+            <p class="copyright">WhatsDue © 2019<br>Edidiong Ekpo, Edwin Hernandez, Nicholas Kalar<br><br></p>
+        </footer>
+        </div>
+        
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        
+        </body>   
+            </html>

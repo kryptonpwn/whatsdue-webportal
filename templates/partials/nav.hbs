@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-color: rgb(4,127,180);">
+    <div class="container"><a class="navbar-brand" href="#" style="color: rgb(252,249,249);">CSUB</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/home" style="color: rgb(245,240,240);font-size: 20;">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/createcourse" style="color: rgb(245,247,248);font-size: 20;">Create Course</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/viewcourse" style="color: rgb(236,239,242);">View Courses</a></li>
+                {{#if admin}}
+                <li class="nav-item" role="presentation"><a class="nav-link" href="adminadd" style="color: rgb(243,243,244);">Add Administrator</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="studentadd" style="color: rgb(247,247,247);">Add Student</a></li>
+                {{/if}}
+            </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="/logout" style="background-color: rgba(86,198,198,0);">Logout</a></span></div>
+
+    </div>
+</nav>

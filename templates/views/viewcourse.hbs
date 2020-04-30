@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>whatsdue</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="font-size: 18px;">
+    {{> nav}}
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+ <!--Page Body-->
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="row">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Course #</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">View Course</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each courses}}
+                        <tr>
+                            <th scope="row">{{this.course_number}}</th>
+                            <td scope="row">{{this.course_name}}</td>
+                            <td>
+
+                                <form action="viewcourse"  method= "post">
+                                    <button name="course" type = "submit" value="{{this.course_number}}">View Course</button>
+                                </form>
+
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{!-- <br>
+                <br>
+                <br> --}}
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Student #</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Drop Student</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each students}}
+                        <tr>
+                            <th scope="row">{{this.student_id}}</th>
+                            <td scope="row">{{this.first_name}} {{this.last_name}}                                                                           </td>
+                            <td>
+                                <form action="viewcourse"  method= "post">
+                                    <button name="studentid" type = "submit" value="{{this.student_id}}">Drop Student</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div id="student0">
+                    <div class="row">
+                        <div class="col">
+                            Add Student To Class
+                        </div>
+                    </div>
+                <form action="viewcourse"  method= "post">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name = "first"class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" name = "last" class="form-control" placeholder="Last name">
+                        </div>
+                        <div class="col">
+                            <input type="text" name = "id" class="form-control" placeholder="Student ID number">
+                        </div>
+                            <div class="col">
+                            <input type="text" name = "course" class="form-control" placeholder="Course Number">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>             <button type = "submit" >Add Student</button>
+
+        </div>
+    </div>
+   
+                    </form>
+        {{!-- <div class="footer-basic">
+<footer>
+    <p class="copyright">WhatsDue © 2019<br>Edidiong Ekpo, Edwin Hernandez, Nicholas Kalar<br><br></p>
+</footer> --}}
+</div>
